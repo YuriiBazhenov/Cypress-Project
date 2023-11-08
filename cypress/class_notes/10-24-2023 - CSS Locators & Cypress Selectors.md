@@ -1,4 +1,3 @@
-
 RECAP:
 
 		- web element tags

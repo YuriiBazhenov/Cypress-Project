@@ -4,7 +4,8 @@ module.exports = defineConfig({
   viewportHeight: 1080,
   viewportWidth: 1980,
   chromeWebSecurity: false,
-  retries: 2,
+  retries: 0,
+  
   env:{
     SITE_URL: 'https://techglobal-training.com/'
   },

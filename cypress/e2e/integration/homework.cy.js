@@ -115,7 +115,7 @@ describe("Homework", () => {
 
   })
 
-  it("Test Case 10 - Validate the form submission", () => {
+  it.only("Test Case 10 - Validate the form submission", () => {
     cy.visit("https://techglobal-training.com/frontend/project-1");
 
 
@@ -127,7 +127,7 @@ describe("Homework", () => {
 
     cy.get(':nth-child(2) > .mr-1').click()
     cy.get('.checkbox > input').click()
-    cy.get('div > .control .button').realClick()
+    cy.get('div > .control .button').click()
     Cypress.on('uncaught:exception', () => {
       // returning false here prevents Cypress from
       // failing the test
