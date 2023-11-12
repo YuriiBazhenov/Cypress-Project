@@ -1,7 +1,7 @@
 describe("Practices", () => {
   it("Implicit Assertions Practice", () => {
     cy.visit("https://techglobal-training.com/frontend");
-    cy.get(".cards").contains("Html Elements").click();
+    cy.clickCard()
 
     /**
      * 1. Go to 'https://techglobal-training.com/frontend'
