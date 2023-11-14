@@ -26,3 +26,14 @@ describe('Hooks', () => {
     })
 })
 
+/**
+ * 1. before
+ * 2. beforeEach
+ * 3. it - Example Test 1
+ * 4. afterEach
+ * 5. beforeEach
+ * 6. it - Example Test 2
+ * 7. afterEach
+ * 8. after
+ */
+
