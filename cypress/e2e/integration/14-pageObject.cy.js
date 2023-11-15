@@ -25,9 +25,10 @@ describe('Login page test', () => {
 
     // })
 
+
     const loginPage = new LoginPage()
 
-    it('Login with POM', function() {
+    it('Login with POM',{tags: ['@smoke', '@regression']}, function() {
 
         cy.clickCard("Project - Login Function");
 
