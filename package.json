@@ -10,7 +10,7 @@
     "test:chrome": "npx cypress run --browser chrome",
     "test:chrome:headed": "npx cypress run --browser chrome --headed",
     "test:config": "npx cypress run --config viewportWidth=1280,viewportHeight=720 --headed",
-    "test:specific": "npx cypress run --spec \"cypress/integration/11-customCommands.spec.js\"",
+    "test:specific": "npx cypress run --spec \"cypress/e2e/integration/14-pageObject.cy.js\"",
     "test:custom": "npx cypress run --spec \"cypress/e2e/integration/11-customCommands.cy.js\" --env SITE_URL=https://techglobal-training.netlify.app --headed",
     "test:smoke": "npx cypress run --env grepTags=@smoke,grepFilterSpecs=true",
     "test:dashboard": "npx cypress run --record --key 28f8bf0a-118b-45b2-b415-7553ccadee5e"
@@ -20,7 +20,10 @@
   "license": "ISC",
   "devDependencies": {
     "@4tw/cypress-drag-drop": "^2.2.5",
-    "cypress": "^13.4.0",
+    "@cypress/grep": "^4.0.1",
+    "cypress": "^13.5.0",
+    "cypress-mochawesome-reporter": "^3.6.1",
     "cypress-real-events": "^1.11.0"
   }
+
 }
