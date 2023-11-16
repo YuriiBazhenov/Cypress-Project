@@ -11,3 +11,15 @@ jobs:
       # and run all Cypress tests
       - name: Cypress run
         uses: cypress-io/github-action@v6
+        with:
+          #browser: chrome
+          #headless: true
+          #spec: cypress/e2e/spec1.cy.js 
+          command: npm run test:smoke 
+
+
+      - name: Artifacts
+        uses: actions/upload-artifact@v3
+        with:
+            name: mochawesome-report
+            path: cypress/reports/html/index.html
