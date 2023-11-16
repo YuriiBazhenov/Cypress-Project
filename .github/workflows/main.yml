@@ -1,4 +1,3 @@
-
 name: End-to-end tests
 on: push
 jobs:
@@ -12,14 +11,20 @@ jobs:
       - name: Cypress run
         uses: cypress-io/github-action@v6
         with:
-          #browser: chrome
-          #headless: true
-          #spec: cypress/e2e/spec1.cy.js 
-          command: npm run test:smoke 
+            # browser: chrome
+            # headless: true
+            # spec: cypress/e2e/spec1.cy.js
+              command: npm run test:smoke
 
+    #   - name: Artifacts
+    #     uses: actions/upload-artifact@v3
+    #     with:
+    #         name: reports
+    #         path: cypress/reports/html/index.html
+    #         if-no-files-found: ignore # 'warn' or 'error' are also available, defaults to `warn`
 
-      - name: Artifacts
-        uses: actions/upload-artifact@v3
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
         with:
-            name: mochawesome-report
-            path: cypress/reports/html/index.html
+            github_token: ${{ secrets.GS_PAGES }}
+            publish_dir: cypress/reports/html/index.html
