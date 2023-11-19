@@ -1,23 +1,23 @@
 /// <reference types="cypress" />
 
-describe("Keyboard & Mouse Actions", () => {
-  it("Keyboard Actions", () => {
-    cy.visit("https://techglobal-training.com/frontend");
-    cy.clickCard("Html Elements");
+describe('Keyboard & Mouse Actions', () => {
+  it('Keyboard Actions', () => {
+    cy.visit('https://techglobal-training.com/frontend')
+    cy.clickCard('Html Elements')
 
     // cy.get('#dropdown-button').trigger('mouseover')
     // cy.get('#dropdown-button').realHover()
 
-    cy.get("#text_input1")
+    cy.get('#text_input1')
       .realClick()
-      .realPress("A")
-      .realPress("Tab")
-      .realPress("KeyB")
-      .realPress("ArrowLeft")
-      .realPress("R")
-      .realPress("ArrowRight")
-      .realPress("Backspace");
-  });
+      .realPress('A')
+      .realPress('Tab')
+      .realPress('KeyB')
+      .realPress('ArrowLeft')
+      .realPress('R')
+      .realPress('ArrowRight')
+      .realPress('Backspace')
+  })
 
   /**
    * Go to https://techglobal-training.com/frontend/
@@ -32,9 +32,9 @@ describe("Keyboard & Mouse Actions", () => {
    * Verify that the message appears next to the element stating, "You double-clicked on a button!"
    */
 
-  it("Click, Right Click, and Double Click", () => {
-    cy.visit("https://techglobal-training.com/frontend");
-    cy.clickCard("Actions");
+  it('Click, Right Click, and Double Click', () => {
+    cy.visit('https://techglobal-training.com/frontend')
+    cy.clickCard('Actions')
 
     cy.url().should('contain','actions')
 
@@ -45,7 +45,7 @@ describe("Keyboard & Mouse Actions", () => {
     cy.get('@buttons').eq(1).should('have.text', 'Right-Click on me').rightclick().next().should('have.text', 'You right-clicked on a button!')
     cy.get('@buttons').last().should('have.text', 'Double-Click on me').dblclick().next().should('have.text', 'You double-clicked on a button!')
 
-  });
+  })
 
   /**
    * Go to https://techglobal-training.com/frontend/
@@ -58,8 +58,8 @@ describe("Keyboard & Mouse Actions", () => {
 
   it.only('Drag and Drop', () => {
 
-    cy.visit("https://techglobal-training.com/frontend");
-    cy.clickCard("Actions");
+    cy.visit('https://techglobal-training.com/frontend')
+    cy.clickCard('Actions')
 
     const arr = ['Drag Me', 'Drop Here']
 
@@ -74,5 +74,5 @@ describe("Keyboard & Mouse Actions", () => {
     cy.get('#drag_and_drop_result').should('have.text', 'An element dropped here!')
 
   })
-});
+})
 

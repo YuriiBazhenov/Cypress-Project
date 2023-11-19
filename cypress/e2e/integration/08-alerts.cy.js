@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
 
-describe("Alerts", () => {
+describe('Alerts', () => {
     /**
      * WARNING ALERT
      * 1. Go to https://techglobal-training.com/frontend/
@@ -11,22 +11,22 @@ describe("Alerts", () => {
      * 6. Validate the result message equals "You accepted warning by clicking OK."
      */
   
-    it("Handling the Warning Alerts", () => {
-      cy.visit("https://techglobal-training.com/frontend");
+    it('Handling the Warning Alerts', () => {
+      cy.visit('https://techglobal-training.com/frontend')
   
-      cy.clickCard("Alerts");
+      cy.clickCard('Alerts')
   
-      cy.on("window:alert", (str) => {
-        console.log("My warning alert text content is :" + str);
+      cy.on('window:alert', (str) => {
+        console.log('My warning alert text content is :' + str)
         expect(str).to.equal('You are on TechGlobal Training application.')
-      });
+      })
   
-      cy.get("#warning_alert").click();
+      cy.get('#warning_alert').click()
   
   
       cy.get('#action').should('have.text', 'You accepted warning by clicking OK.')
   
-    });
+    })
   
     /**
      * CONFIRMATION ALERT
@@ -40,12 +40,12 @@ describe("Alerts", () => {
   
     it('Handling the Confirmation Alert', () => {
   
-      cy.visit("https://techglobal-training.com/frontend");
+      cy.visit('https://techglobal-training.com/frontend')
   
-      cy.clickCard("Alerts");
+      cy.clickCard('Alerts')
   
   
-      cy.get("#confirmation_alert").click();
+      cy.get('#confirmation_alert').click()
   
       cy.once('window:confirm', (str) => {
           console.log(str)
@@ -56,7 +56,7 @@ describe("Alerts", () => {
       cy.get('#action').should('have.text', 'You rejected the alert by clicking Cancel.')
   
   
-      cy.get("#confirmation_alert").click();
+      cy.get('#confirmation_alert').click()
   
       cy.get('#action').should('have.text', 'You confirmed the alert by clicking OK.')
     })
@@ -64,9 +64,9 @@ describe("Alerts", () => {
   
     it('Handling alerts - Prompt alert', () => {
   
-      cy.visit("https://techglobal-training.com/frontend");
+      cy.visit('https://techglobal-training.com/frontend')
   
-      cy.clickCard("Alerts");
+      cy.clickCard('Alerts')
   
   
       // Clicking the "Cancel" in prompt Alert
@@ -98,4 +98,4 @@ describe("Alerts", () => {
   
   
     })
-  });
+  })

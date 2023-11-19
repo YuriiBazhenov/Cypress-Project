@@ -40,10 +40,10 @@ describe('My First Test', () => {
     })
 
     it('Logo', () => {
-        cy.visit('https://techglobal-training.com/');
+        cy.visit('https://techglobal-training.com/')
 
-        cy.get("#logo").click()
-        cy.get("#logo").should('be.visible')
+        cy.get('#logo').click()
+        cy.get('#logo').should('be.visible')
     })
 })
 

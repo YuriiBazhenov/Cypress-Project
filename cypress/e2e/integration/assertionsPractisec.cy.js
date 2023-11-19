@@ -1,6 +1,6 @@
-describe("Practices", () => {
-  it("Implicit Assertions Practice", () => {
-    cy.visit("https://techglobal-training.com/frontend");
+describe('Practices', () => {
+  it('Implicit Assertions Practice', () => {
+    cy.visit('https://techglobal-training.com/frontend')
     cy.clickCard()
 
     /**
@@ -12,15 +12,15 @@ describe("Practices", () => {
      * 6. Validate their id and value
      */
 
-    cy.get("#hello_paragraph")
-      .should("be.visible")
-      .and("have.text", "Hello World!")
-      .and("have.attr", "id", "hello_paragraph");
+    cy.get('#hello_paragraph')
+      .should('be.visible')
+      .and('have.text', 'Hello World!')
+      .and('have.attr', 'id', 'hello_paragraph')
 
-    cy.get("#testing_paragraph")
-      .should("be.visible")
-      .and("have.text", "I like automation testing!")
-      .and("have.attr", "id", "testing_paragraph");
+    cy.get('#testing_paragraph')
+      .should('be.visible')
+      .and('have.text', 'I like automation testing!')
+      .and('have.attr', 'id', 'testing_paragraph')
 
     /**
      * 1. Go to 'https://techglobal-training.com/frontend'
@@ -31,15 +31,15 @@ describe("Practices", () => {
      * 6. Validate both buttons are enabled
      */
 
-    cy.get("#register_button")
-      .should("be.visible")
-      .and("be.enabled")
-      .and("have.text", "Register");
+    cy.get('#register_button')
+      .should('be.visible')
+      .and('be.enabled')
+      .and('have.text', 'Register')
 
-    cy.get("#signin_button")
-      .should("be.visible")
-      .and("be.enabled")
-      .and("have.text", "Sign in");
+    cy.get('#signin_button')
+      .should('be.visible')
+      .and('be.enabled')
+      .and('have.text', 'Sign in')
 
     /**
      * 1. Go to 'https://techglobal-training.com/frontend'
@@ -50,17 +50,17 @@ describe("Practices", () => {
      * 6. Validate their texts are equal "Cypress" and "Selenium Webdriver"
      */
 
-    cy.get("#ordered_list")
+    cy.get('#ordered_list')
       .prev()
-      .should("be.visible")
-      .and("have.text", "Ordered Lists")
+      .should('be.visible')
+      .and('have.text', 'Ordered Lists')
       .next()
-      .find("#ordered_list_item1")
-      .should("be.visible")
-      .and("have.text", "Cypress")
+      .find('#ordered_list_item1')
+      .should('be.visible')
+      .and('have.text', 'Cypress')
       .next()
-      .should("be.visible")
-      .and("have.text", "Selenium Webdriver");
+      .should('be.visible')
+      .and('have.text', 'Selenium Webdriver')
 
     /**
      * 1. Go to 'https://techglobal-training.com/frontend'
@@ -72,36 +72,36 @@ describe("Practices", () => {
      * 6. Validate their texts are equal "Facebook" and "Instagram"
      */
 
-    cy.get("#ordered_list_item1")
-      .should("be.visible")
-      .and("have.text", "Cypress")
+    cy.get('#ordered_list_item1')
+      .should('be.visible')
+      .and('have.text', 'Cypress')
       .next()
-      .should("be.visible")
-      .and("have.text", "Selenium Webdriver");
+      .should('be.visible')
+      .and('have.text', 'Selenium Webdriver')
 
-    cy.get("#facebook_link")
+    cy.get('#facebook_link')
       .prev()
-      .should("be.visible")
-      .and("have.text", "Links");
+      .should('be.visible')
+      .and('have.text', 'Links')
 
-    cy.get("#facebook_link")
-      .should("be.visible")
-      .and("have.attr", "href", "https://www.facebook.com/techglobaleducation")
-      .and("have.text", "Facebook");
+    cy.get('#facebook_link')
+      .should('be.visible')
+      .and('have.attr', 'href', 'https://www.facebook.com/techglobaleducation')
+      .and('have.text', 'Facebook')
 
-    cy.get("#facebook_link")
+    cy.get('#facebook_link')
       .prev()
-      .should("be.visible")
-      .and("have.text", "Links");
+      .should('be.visible')
+      .and('have.text', 'Links')
 
-    cy.get("#instagram_link")
-      .should("be.visible")
+    cy.get('#instagram_link')
+      .should('be.visible')
       .and(
-        "have.attr",
-        "href",
-        "https://www.instagram.com/techglobal.school/?hl=en"
+        'have.attr',
+        'href',
+        'https://www.instagram.com/techglobal.school/?hl=en'
       )
-      .and("have.text", "Instagram");
+      .and('have.text', 'Instagram')
 
     /**
      * 1. Go to 'https://techglobal-training.com/frontend'
@@ -114,16 +114,16 @@ describe("Practices", () => {
      * 8. Validate its checked
      */
 
-    cy.get("#tesla_check")
-      .should("have.text", "Tesla")
+    cy.get('#tesla_check')
+      .should('have.text', 'Tesla')
       .prev()
-      .and("be.enabled")
-      .and("be.not.checked")
+      .and('be.enabled')
+      .and('be.not.checked')
       .check()
-      .and("be.checked");
-  });
+      .and('be.checked')
+  })
 
-  it("Practice 2", () => {
+  it('Practice 2', () => {
     /**
      * Test Case: Validate Dropdowns Functionality on TechGlobal Training Page
      * Go to https://techglobal-training.com/frontend
@@ -135,12 +135,12 @@ describe("Practices", () => {
      * Validate result message displays "Your Green MacBook Pro 13 will be delivered to you."
      */
 
-    cy.visit("https://techglobal-training.com/frontend");
-    cy.get(".cards").contains("Dropdowns").click();
+    cy.visit('https://techglobal-training.com/frontend')
+    cy.get('.cards').contains('Dropdowns').click()
 
     const product = 'MacBook Pro 13'
     const color = 'Green'
-    const shippingOption = "Delivery"
+    const shippingOption = 'Delivery'
     const expectedMessage = shippingOption === 'Delivery' 
     ? `Your ${color} ${product} will be delivered to you.`
     : `Your ${color} ${product} is ready to be picked up.`
@@ -155,8 +155,8 @@ describe("Practices", () => {
 
     cy.get('#result').should('have.text', expectedMessage)
 
-  });
+  })
 
 
   
-});
+})

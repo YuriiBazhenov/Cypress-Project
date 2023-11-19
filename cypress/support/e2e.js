@@ -17,7 +17,7 @@
 import './commands'
 import 'cypress-real-events'
 import '@4tw/cypress-drag-drop'
-import 'cypress-mochawesome-reporter/register';
+import 'cypress-mochawesome-reporter/register'
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
 
@@ -27,6 +27,6 @@ registerCypressGrep()
 
 
 beforeEach(() => {
-    cy.visit("https://techglobal-training.com/frontend");
+    cy.visit('https://techglobal-training.com/frontend')
 })
 

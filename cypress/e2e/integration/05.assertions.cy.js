@@ -172,13 +172,13 @@ describe('Cypress Assertions', () => {
         cy.get('@paragraphHeader').first().should('have.text', 'Hello World!')
         cy.get('@paragraphHeader').last().should('have.text', 'I like automation testing!')
 
-        cy.get('@paragraphHeader').first().should("have.text", "Hello World!").next().should("have.text", "I like automation testing!")
+        cy.get('@paragraphHeader').first().should('have.text', 'Hello World!').next().should('have.text', 'I like automation testing!')
 
         const arr = ['Hello World!', 'I like automation testing!']
 
         // And we can loop through using fori loop by their index - NOT A PREFERRED WAY
         for (let i = 0; i < arr.length; i++) {
-            cy.get('@paragraphHeader').eq(i).should("have.text", arr[i])
+            cy.get('@paragraphHeader').eq(i).should('have.text', arr[i])
         }
 
         // We can assert these using each() and validate using explicit assertion

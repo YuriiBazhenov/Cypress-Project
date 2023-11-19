@@ -92,9 +92,9 @@ describe('Cypress actions', () => {
 
         cy.get('.cards').contains('Html Elements').click()
 
-        cy.get("#date_input1").type("11/11/1990{enter}")
+        cy.get('#date_input1').type('11/11/1990{enter}')
 
-        cy.get("#date_input2").clear().type("02/20/1987{esc}")
+        cy.get('#date_input2').clear().type('02/20/1987{esc}')
     })
 
     it('Dropdown input', () => {

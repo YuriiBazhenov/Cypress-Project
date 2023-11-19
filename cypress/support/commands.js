@@ -75,6 +75,17 @@ Cypress.Commands.add('assertAttribute', {prevSubject: true}, (subject, attr, att
     cy.wrap(subject).should('have.attr', attr, attrValue)
 })
 
+
+
+Cypress.Commands.add('checkOptionAndValidateOthers', (optionToCheck, validation) => {
+    cy.get(optionToCheck).check().should('be.checked')
+    validation.filter(option => option !== optionToCheck).forEach(unchecked => {
+      cy.get(unchecked).should('not.be.checked')
+    })
+  })
+
+
+
 //Create a cypresss child custom command
 // that validates any given attribute, and ANY given value
 

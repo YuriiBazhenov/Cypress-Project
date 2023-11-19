@@ -6,4 +6,4 @@ class TablesPage {
    }
 }
 
-export default TablesPage;
+export default TablesPage

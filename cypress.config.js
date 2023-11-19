@@ -1,6 +1,7 @@
-const { defineConfig } = require("cypress");
+const { defineConfig } = require('cypress')
 
 module.exports = defineConfig({
+  projectId: 'buu9sg',
   viewportHeight: 1080,
   viewportWidth: 1980,
   chromeWebSecurity: false,
@@ -18,9 +19,9 @@ module.exports = defineConfig({
   },
   e2e: {
     setupNodeEvents(on, config) {
-      require('cypress-mochawesome-reporter/plugin')(on);
-      require('@cypress/grep/src/plugin')(config);
-      return config;
+      require('cypress-mochawesome-reporter/plugin')(on)
+      require('@cypress/grep/src/plugin')(config)
+      return config
       // implement node event listeners here
 
     },
@@ -29,6 +30,6 @@ module.exports = defineConfig({
     screenshotOnRunFailure: true,
     video: true,
   },
-});
+})
 
 

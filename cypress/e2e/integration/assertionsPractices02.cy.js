@@ -34,7 +34,7 @@ it('Assertions practices', () => {
     cy.clickCard('Html Elements')
     cy.contains('Date Inputs').parent().find('input').as('Inputs')
 
-    const dates = ["11/11/1990", "11/11/1990"]
+    const dates = ['11/11/1990', '11/11/1990']
     cy.get('@Inputs').each(($el, index) => {
         cy.wrap($el).clear().type(`${dates[index]}{enter}`).should('be.enabled').and('not.have.attr', 'required')
         cy.wrap($el).should('have.attr', 'value', dates[index])

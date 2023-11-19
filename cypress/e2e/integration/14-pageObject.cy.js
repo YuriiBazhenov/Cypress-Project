@@ -1,4 +1,4 @@
-import LoginPage from "../../pages/LoginPage";
+import LoginPage from '../../pages/LoginPage'
 
 describe('Login page test', () => {
 
@@ -30,7 +30,7 @@ describe('Login page test', () => {
 
     it('Login with POM',{tags: ['@smoke', '@regression']}, function() {
 
-        cy.clickCard("Project - Login Function");
+        cy.clickCard('Project - Login Function')
 
         loginPage.userLogin(this.username, this.password)
         loginPage.getSuccessMessage().should('be.visible')

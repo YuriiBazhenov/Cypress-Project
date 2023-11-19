@@ -1,6 +1,6 @@
-import TablesPage from "../../pages/TablesPage";
+import TablesPage from '../../pages/TablesPage'
 
-describe("Static Tables", () => {
+describe('Static Tables', () => {
 
     beforeEach(() => {
         cy.fixture('example').then(function(data) {
@@ -17,11 +17,11 @@ describe("Static Tables", () => {
 
   const tablesPage = new TablesPage()
 
-  it("Verify the headers of the table", {tags: ['@smoke', '@regression']}, function() {
+  it('Verify the headers of the table', {tags: ['@smoke', '@regression']}, function() {
     cy.visit('https://techglobal-training.com/frontend/tables')
 
     tablesPage.getCompanyTableHeaders().find('th').each(($txt, index) => {
         cy.wrap($txt).should('have.text', this.headers[index])
     })
-  });
-});
+  })
+})
