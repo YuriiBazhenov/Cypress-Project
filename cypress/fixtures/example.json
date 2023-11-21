@@ -5,5 +5,4 @@
   "username": "TechGlobal",
   "password": "Test1234",
   "headers": ["Rank", "Company", "Employees", "Country"]
-  
 }

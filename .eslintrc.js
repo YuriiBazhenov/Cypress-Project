@@ -15,7 +15,7 @@ module.exports = {
         quotes: ['error', 'single'],
         'max-len': [
             'error',
-            {code: 120, ignoreComments: true, ignoreStrings: true}
+            {code: 140, ignoreComments: true, ignoreStrings: true}
         ],
         'no-undef': 'off',
     }
